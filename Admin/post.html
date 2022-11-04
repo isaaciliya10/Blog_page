@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | Premier Report </title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="bootstrap.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+<body>
+
+  <!---sidebar---->
+  <div class="sidebar">
+    <div class="logo-details"> &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;<span class="logo_name"><span style="color:silver; font-size:xxx-large">P</span>remier <span style="color:silver; font-size:xxx-large">R</span>eport</span>
+    </div>
+
+    <!---sidebar links--->
+      <ul class="nav-links">
+        <li>
+          <a href="#" class="active">   
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="links_name">Add New Post</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="links_name">Categories</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="links_name">Manage Admin</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">  
+            <span class="links_name">Admin Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="links_name">LogOut</span>
+          </a>
+        </li>         
+      </ul>
+  </div>
+
+  <!---top dashboard-->
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">  
+        <span class="dashboard"><span style="color: #0A2558; font-size:xxx-large;">A</span>dmin&nbsp;<span style="color: #0A2558; font-size:xxx-large;">D</span>ash<span style="color: #0A2558; font-size:xxx-large;">B</span>oard</span>
+      </div>  
+    </nav>
+
+    <!---form section for categorey-->
+    <div class="container"> 
+      <div class="right-side">
+      
+      <form action="" method="Post">
+        <div class="row">
+        <div class="col-md-6"> 
+         <div class = "form-group">
+            <label for = "author" class="m-2">Author</label>
+            <input type="text" class = "form-control" placeholder="Enter Author Name">
+         </div>
+        </div>
+         <div class="col-md-6">
+         <div class = "form-group">
+            <label for = "title" class="mt-2">Title</label>
+            <input type="text" class = "form-control" placeholder="Enter Title Name">
+         </div>
+         </div>
+         <div class="col-md-4"> 
+         <div class = "form-group">
+            <label for = "date" class="mt-2">Date</label>
+            <input type="date" class = "form-control">
+         </div>
+        </div>
+         <div class="col-md-4">
+         <div class = "form-group">
+            <label for = "time" class="mt-2">Time</label>
+            <input type="time" class = "form-control">
+         </div>
+         </div>
+         <div class="col-md-4">
+         <div class = "form-group">
+            <label for = "image" class="mt-2">Upload Image</label>
+            <input type="file" class = "form-control">
+         </div>
+         </div>
+
+        <div class = "form-group">
+            <label for = "Message" class="mt-2">Write News</label>
+            <textarea class = "form-control" rows = "10" placeholder = "Enter News"></textarea>
+         </div>
+         
+        <div class="button">
+          <input type="button" name="submit" value="Submit" >
+        </div>
+      </form>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+
+</body>
+</html>
